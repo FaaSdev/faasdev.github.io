@@ -1,0 +1,5 @@
+FaaS Documentation
+==================
+
+.. include:: README.md
+
