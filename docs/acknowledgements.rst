@@ -21,7 +21,7 @@ Tutors
 -------
 
 Tencent: 
-    - Stone
+    - Stone_
     - Alfred
 
 .. _Stone: https://cloud.tencent.com/developer/user/561187/activities
