@@ -26,7 +26,7 @@ author = 'SUSTech-FaaS'
 # The short X.Y version
 version = 'latest'
 # The full version, including alpha/beta/rc tags
-release = '0.0.0'
+release = '0.3.0'
 
 
 # -- General configuration ---------------------------------------------------
