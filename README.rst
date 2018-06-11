@@ -3,9 +3,7 @@ Welcome to FaaS
 ===============
 
 .. image:: https://img.shields.io/badge/FaaS-v0.3.0-orange.svg
-    :alt: FaaS Version 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
-    :alt: License
 
 FaaS 
 ------------------
