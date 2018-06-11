@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>FaaS Documentation &mdash; FaaS 0.0.0 documentation</title>
+  <title>Welcome to FaaS &mdash; FaaS 0.0.0 documentation</title>
   
 
   
@@ -29,8 +29,10 @@
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="introduction.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -83,19 +85,68 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">FaaS Documentation</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#usage">Usage</a></li>
-<li><a class="reference internal" href="#contribute">Contribute</a></li>
-<li><a class="reference internal" href="#support">Support</a></li>
-<li><a class="reference internal" href="#license">License</a></li>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#serverless-computing">Serverless Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#function-as-a-service">Function as a Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#api-gateway">API Gateway</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#advantages">Advantages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#motivation">Motivation</a></li>
 </ul>
 </li>
 </ul>
-</div>
+<p class="caption"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#uploading">Uploading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#authorization">Authorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#file-uploading">File uploading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#processing">Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api.html#fetching">Fetching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#rotation">Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#qr-code">QR code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#corner-rounding">Corner-rounding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#thumbnail">Thumbnail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#watermark-with-text">Watermark with text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#watermark-with-image">Watermark with image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#image-slicing">Image Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html#image-converter">Image Converter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#downloading">Downloading</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Architecture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html#workflow">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chenglog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">Todo</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#support">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#license">License</a></li>
+</ul>
+</li>
+</ul>
+
             
           
         </div>
@@ -139,7 +190,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>FaaS Documentation</li>
+      <li>Welcome to FaaS</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -160,40 +211,68 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="faas-documentation">
-<h1>FaaS Documentation<a class="headerlink" href="#faas-documentation" title="Permalink to this headline">¶</a></h1>
-<p># FaaS Documentation</p>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Be awesome</li>
-<li>Make things faster</li>
+  <div class="section" id="welcome-to-faas">
+<h1>Welcome to FaaS<a class="headerlink" href="#welcome-to-faas" title="Permalink to this headline">¶</a></h1>
+<p>![](<a class="reference external" href="https://img.shields.io/badge/FaaS-v0.3.0-orange.svg">https://img.shields.io/badge/FaaS-v0.3.0-orange.svg</a>)
+![](<a class="reference external" href="https://img.shields.io/badge/license-MIT-blue.svg">https://img.shields.io/badge/license-MIT-blue.svg</a>)</p>
+<div class="section" id="faas">
+<h2>FaaS<a class="headerlink" href="#faas" title="Permalink to this headline">¶</a></h2>
+<p>Our project is also named FaaS, which is a project based on Tencent Serverless Cloud
+Function(<a class="reference external" href="https://cloud.tencent.com/product/scf">SCF</a>) to provide users fast images processing services. We use their SCF
+service to develop our cloud function, use their Cloud Object Storage(<a class="reference external" href="https://cloud.tencent.com/product/cos">COS</a>) to store
+figures and use <a class="reference external" href="https://cloud.tencent.com/product/apigateway?idx=2">API Gateway</a> to custom our APIs to release to users.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#serverless-computing">Serverless Computing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#function-as-a-service">Function as a Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="introduction.html#api-gateway">API Gateway</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#advantages">Advantages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#motivation">Motivation</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>Install $project by running:</p>
-<blockquote>
-<div>install project</div></blockquote>
-</div>
-<div class="section" id="contribute">
-<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Issue Tracker: github.com/$project/$project/issues</li>
-<li>Source Code: github.com/$project/$project</li>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#uploading">Uploading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#processing">Processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#downloading">Downloading</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<div class="section" id="support">
-<h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
-<p>If you are having issues, please let us know.
-We have a mailing list located at: <a class="reference external" href="mailto:project&#37;&#52;&#48;google-groups&#46;com">project<span>&#64;</span>google-groups<span>&#46;</span>com</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Architecture</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+</ul>
 </div>
-<div class="section" id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
-<p>The project is licensed under the MIT license.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Management</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chenglog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">Todo</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Others</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about.html#support">Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about.html#license">License</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -202,6 +281,13 @@ We have a mailing list located at: <a class="reference external" href="mailto:pr
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="introduction.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>

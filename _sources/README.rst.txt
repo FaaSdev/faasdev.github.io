@@ -1,37 +1,23 @@
-# FaaS Documentation
+===============
+Welcome to FaaS
+===============
 
-Overview
---------
-
-
-
-Features
---------
-
-- Be awesome
-- Make things faster
-
-Usage
------
-
-Install $project by running:
-
-    install project
-
-Contribute
-----------
-
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+![](https://img.shields.io/badge/FaaS-v0.3.0-orange.svg)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
-Support
--------
+FaaS 
+------------------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+Our project is also named FaaS, which is a project based on Tencent Serverless Cloud 
+Function(SCF_) to provide users fast images processing services. We use their SCF 
+service to develop our cloud function, use their Cloud Object Storage(COS_) to store 
+figures and use `API Gateway`_ to custom our APIs to release to users. 
 
-License
--------
+.. _SCF: https://cloud.tencent.com/product/scf
+.. _COS: https://cloud.tencent.com/product/cos
+.. _`API Gateway`: https://cloud.tencent.com/product/apigateway?idx=2
 
-The project is licensed under the MIT license.
+
+
+

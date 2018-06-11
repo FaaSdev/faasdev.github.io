@@ -8,14 +8,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; FaaS 0.0.0 documentation</title>
+  <title>Architecture &mdash; FaaS 0.0.0 documentation</title>
   
 
   
   
   
   
-    <link rel="canonical" href="faasdev.github.iosearch.html"/>
+    <link rel="canonical" href="faasdev.github.ioarchitecture.html"/>
   
 
   
@@ -31,7 +31,9 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="chenglog.html" />
+    <link rel="prev" title="APIs" href="api.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -67,7 +69,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -124,10 +126,10 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Architecture</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html#workflow">Workflow</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
 </ul>
 </li>
 </ul>
@@ -189,14 +191,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>Architecture</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
             
-              <a href="https://github.com/FaaSdev/faasdev.github.io/blob/master/search" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/FaaSdev/faasdev.github.io/blob/master/architecture.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -210,24 +212,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Our project is based on <a class="reference external" href="https://cloud.tencent.com">Tencent Cloud</a>. Three products are used in our project.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://cloud.tencent.com/product/scf">SCF</a>: provide a runtime environmemt.</li>
+<li><a class="reference external" href="https://cloud.tencent.com/product/cos">COS</a>: store staff.</li>
+<li><a class="reference external" href="https://cloud.tencent.com/product/apigateway?idx=2">API Gateway</a>: expose services to users.</li>
+</ul>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>APIs is the only service expose to user, which they can directly access. API-gateway
+receive all external user web request and response corresponding processed data. The
+request will be passed to COS or SCF for further handling. COS processes the data
+storage task. SCF deals with image processing.</p>
+<p>A whole image processing request contains 4 sub-queries.</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Get authorized secret key to upload image</dt>
+<dd>For safety reasons, the user cannot get the authorization for uploading image as
+the administrator. Users’ image will be checked and users will be returned an
+authorized signature for uploading an image to COS.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Upload image with signature</dt>
+<dd>User upload image with the signature.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Post parameter to image processing</dt>
+<dd>User post the image processing query to the API, which includes the parameters.
+A processed image path will be returned.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Download processed image</dt>
+<dd>User can preview or download processed image from previous path.</dd>
+</dl>
+</li>
+</ol>
+<img alt="_images/architecture.png" src="_images/architecture.png" />
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="chenglog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api.html" class="btn btn-neutral" title="APIs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -268,7 +313,6 @@
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -281,14 +325,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+  </script> 
 
 </body>
 </html>

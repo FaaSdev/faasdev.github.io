@@ -57,7 +57,7 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
@@ -100,7 +100,7 @@ html_theme_options = {
     'collapse_navigation': False,
     'sticky_navigation': True,
     'navigation_depth': 4,
-    'includehidden': True,
+    'includehidden': False,
     'titles_only': False
 }
 
