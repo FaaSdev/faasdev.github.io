@@ -84,9 +84,13 @@ Field Description
 | content       | String store in QR code.                   |
 +---------------+--------------------------------------------+
 | position      | When fixed = 0, the position of QR         |
-|               | Code (5 for default). When fixed = 1,      |
-|               | the position is the pixel point            |
-|               | in the original graph (width, height).     |
+|               | Code has 5 choices: 1 for Upper Left,      |
+|               | 2 for Upper Right, 3 for Center,           |
+|               | 4 for Bottom Left, 5 for Bottom Right      |
+|               | (default = 5).                             |
+|               | When fixed = 1, the position is defined by |
+|               | the pixel point in the original graph      |
+|               | (width, height).                           |
 +---------------+--------------------------------------------+
 | fixed         | 0 for using relative position, 1 for using |
 |               | fixed pixel position. (default = 0)        |
@@ -138,10 +142,17 @@ Field Description
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | clear_ratio      | How clear the water mark is                                                                                                                     |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| position         | When fixed = 0, the position of QR Code (5 for default). When fixed = 1, the position is the pixel point in the original graph (width, height). |
+| position         | When fixed = 0, the position of QR Code has 5 choices: 1 for Upper Left, 2 for Upper Right, 3 for Center, 4 for Bottom Left, 5 for Bottom Right |
+|                  | (default = 5). When fixed = 1, the position is defined by the pixel point in the original graph (width, height).                                |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | fixed            | 0 for using relative position, 1 for using fixed pixel position. (default = 0)                                                                  |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+
+
+ 
+
 
 Watermark with image
 ^^^^^^^^^^^^^^^^^^^^^
@@ -155,7 +166,8 @@ Field Description
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | clear_ratio     | How clear the water mark is                                                                                                                     |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| position        | When fixed = 0, the position of QR Code (5 for default). When fixed = 1, the position is the pixel point in the original graph (width, height). |
+| position        | When fixed = 0, the position of QR Code has 5 choices: 1 for Upper Left, 2 for Upper Right, 3 for Center, 4 for Bottom Left, 5 for Bottom Right |
+|                 | (default = 5). When fixed = 1, the position is defined by the pixel point in the original graph (width, height).                                |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | fixed           | 0 for using relative position, 1 for using fixed pixel position. (default = 0)                                                                  |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
