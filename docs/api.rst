@@ -92,7 +92,7 @@ Field Description
 |               | fixed pixel position. (default = 0)        |
 +---------------+--------------------------------------------+
 
-Corner-rounding
+Round
 ^^^^^^^^^^^^^^^^^^^^^
 
 Field Description
@@ -160,7 +160,7 @@ Field Description
 | fixed           | 0 for using relative position, 1 for using fixed pixel position. (default = 0)                                                                  |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Image Slicing
+Slicing
 ^^^^^^^^^^^^^^^^^^^^^
 
 Field Description
