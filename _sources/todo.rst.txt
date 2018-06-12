@@ -11,10 +11,6 @@ Functions
 -------------
 .. todo::
     - Add verification for images
+    - Add API docs for return values for all functions
     - Bugfix
     - Testing
-
-Bugfix
-------------
-.. todo::
-    Nothing
