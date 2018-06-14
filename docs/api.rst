@@ -46,7 +46,7 @@ Processing
 Fetching
 ^^^^^^^^^^^^^^
 
-Send a POST query for processing uploaded file.
+Send a POST query with a json for processing uploaded file.
 
 - 'Content-Type': 'application/json'
 
@@ -57,9 +57,9 @@ Field Description
 +---------------+----------------------------------------+
 | file_name     | File name                              |
 +---------------+----------------------------------------+
-| op            | operation number (0 - 7)               |
+| op            | Operation number (0 - 7)               |
 +---------------+----------------------------------------+
-| op_par        | operation parameter                    |
+| op_par        | Operation parameter                    |
 +---------------+----------------------------------------+
 
 Rotation
@@ -119,9 +119,9 @@ Field Description
 +---------------+------------------------------------+
 | **Parameter** | **Value**                          |
 +---------------+------------------------------------+
-| height        | thumbnail height                   |
+| height        | Thumbnail height                   |
 +---------------+------------------------------------+
-| width         | thumbnail width                    |
+| width         | Thumbnail width                    |
 +---------------+------------------------------------+
 
 Watermark with text
@@ -134,24 +134,19 @@ Field Description
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | content          | The water mark text                                                                                                                             |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| font_name        | The path of font style                                                                                                                          |
+| font_name        | The name of font style                                                                                                                          |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | size_ratio       | The size of water mark based on input figure                                                                                                    |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| rotate_angle     | The rotate angle for text                                                                                                                       |
+| rotate_angle     | The rotate angle for text. Counter clock                                                                                                        |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| clear_ratio      | How clear the water mark is                                                                                                                     |
+| clear_ratio      | The contrast between the watermark and the background                                                                                           |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | position         | When fixed = 0, the position of QR Code has 5 choices: 1 for Upper Left, 2 for Upper Right, 3 for Center, 4 for Bottom Left, 5 for Bottom Right |
 |                  | (default = 5). When fixed = 1, the position is defined by the pixel point in the original graph (width, height).                                |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | fixed            | 0 for using relative position, 1 for using fixed pixel position. (default = 0)                                                                  |
 +------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-
-
- 
 
 
 Watermark with image
@@ -164,7 +159,7 @@ Field Description
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | patch           | The path for water mark image                                                                                                                   |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-| clear_ratio     | How clear the water mark is                                                                                                                     |
+| clear_ratio     | The contrast between the watermark and the background                                                                                           |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 | position        | When fixed = 0, the position of QR Code has 5 choices: 1 for Upper Left, 2 for Upper Right, 3 for Center, 4 for Bottom Left, 5 for Bottom Right |
 |                 | (default = 5). When fixed = 1, the position is defined by the pixel point in the original graph (width, height).                                |
@@ -193,7 +188,23 @@ Field Description
 +---------------+------------------------------------+
 | **Parameter** | **Value**                          |
 +---------------+------------------------------------+
-| postfix       | image postfix                      |
+| postfix       | Image postfix                      |
++---------------+------------------------------------+
+
+
+Processing Response
+------------------
+
+Previous query response a json.
+
+Field Description
+
++---------------+------------------------------------+
+| **Parameter** | **Value**                          |
++---------------+------------------------------------+
+| data          | All processed files' name          |
++---------------+------------------------------------+
+| file_cnt      | File count in the data field       |
 +---------------+------------------------------------+
 
 
