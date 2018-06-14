@@ -121,6 +121,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#image-converter">Image Converter</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#processing-response">Processing Response</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#downloading">Downloading</a></li>
 </ul>
 </li>
@@ -239,20 +240,25 @@
 <p>Send a GET query for getting a temp secret key to your authorization server.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="29%" />
-<col width="71%" />
+<col width="24%" />
+<col width="19%" />
+<col width="57%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>method</td>
+<td>str</td>
 <td>“POST”,which is the upload method.</td>
 </tr>
 <tr class="row-odd"><td>pathname</td>
+<td>str</td>
 <td>“/”, which is the path in COS.</td>
 </tr>
 <tr class="row-even"><td>key</td>
+<td>str</td>
 <td>File name</td>
 </tr>
 </tbody>
@@ -284,28 +290,33 @@
 <h2>Processing<a class="headerlink" href="#processing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="fetching">
 <h3>Fetching<a class="headerlink" href="#fetching" title="Permalink to this headline">¶</a></h3>
-<p>Send a POST query for processing uploaded file.</p>
+<p>Send a POST query with a json for processing uploaded file.</p>
 <ul class="simple">
 <li>‘Content-Type’: ‘application/json’</li>
 </ul>
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="27%" />
-<col width="73%" />
+<col width="22%" />
+<col width="18%" />
+<col width="60%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>file_name</td>
+<td>str</td>
 <td>File name</td>
 </tr>
 <tr class="row-odd"><td>op</td>
-<td>operation number (0 - 7)</td>
+<td>int</td>
+<td>Operation number (0 - 7)</td>
 </tr>
 <tr class="row-even"><td>op_par</td>
-<td>operation parameter</td>
+<td>dict</td>
+<td>Operation parameter</td>
 </tr>
 </tbody>
 </table>
@@ -315,14 +326,17 @@
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="29%" />
-<col width="71%" />
+<col width="24%" />
+<col width="19%" />
+<col width="57%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>angle</td>
+<td>int</td>
 <td>The angle to rotate. Counter clock</td>
 </tr>
 </tbody>
@@ -333,17 +347,21 @@
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="75%" />
+<col width="21%" />
+<col width="18%" />
+<col width="61%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>content</td>
+<td>str</td>
 <td>String store in QR code.</td>
 </tr>
 <tr class="row-odd"><td>position</td>
+<td>int or dict</td>
 <td>When fixed = 0, the position of QR
 Code has 5 choices: 1 for Upper Left,
 2 for Upper Right, 3 for Center,
@@ -354,6 +372,7 @@ the pixel point in the original graph
 (width, height).</td>
 </tr>
 <tr class="row-even"><td>fixed</td>
+<td>int</td>
 <td>0 for using relative position, 1 for using
 fixed pixel position. (default = 0)</td>
 </tr>
@@ -365,18 +384,22 @@ fixed pixel position. (default = 0)</td>
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="25%" />
-<col width="75%" />
+<col width="21%" />
+<col width="18%" />
+<col width="61%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>radius</td>
+<td>float</td>
 <td>If fixed = 0, radius represent in ratio;
 If fixed = 1, radius represent in pixel.</td>
 </tr>
 <tr class="row-odd"><td>fixed</td>
+<td>int</td>
 <td>0 for using relative position, 1 for using
 fixed pixel position. (default = 0)</td>
 </tr>
@@ -388,18 +411,22 @@ fixed pixel position. (default = 0)</td>
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="29%" />
-<col width="71%" />
+<col width="23%" />
+<col width="20%" />
+<col width="56%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>height</td>
-<td>thumbnail height</td>
+<td>int</td>
+<td>Thumbnail height</td>
 </tr>
 <tr class="row-odd"><td>width</td>
-<td>thumbnail width</td>
+<td>int</td>
+<td>Thumbnail width</td>
 </tr>
 </tbody>
 </table>
@@ -409,33 +436,42 @@ fixed pixel position. (default = 0)</td>
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="11%" />
-<col width="89%" />
+<col width="10%" />
+<col width="7%" />
+<col width="82%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>content</td>
+<td>str</td>
 <td>The water mark text</td>
 </tr>
 <tr class="row-odd"><td>font_name</td>
-<td>The path of font style</td>
+<td>str</td>
+<td>The name of font style</td>
 </tr>
 <tr class="row-even"><td>size_ratio</td>
+<td>float</td>
 <td>The size of water mark based on input figure</td>
 </tr>
 <tr class="row-odd"><td>rotate_angle</td>
-<td>The rotate angle for text</td>
+<td>int</td>
+<td>The rotate angle for text. Counter clock</td>
 </tr>
 <tr class="row-even"><td>clear_ratio</td>
-<td>How clear the water mark is</td>
+<td>float</td>
+<td>The contrast between the watermark and the background</td>
 </tr>
 <tr class="row-odd"><td>position</td>
+<td>int or dict</td>
 <td>When fixed = 0, the position of QR Code has 5 choices: 1 for Upper Left, 2 for Upper Right, 3 for Center, 4 for Bottom Left, 5 for Bottom Right
 (default = 5). When fixed = 1, the position is defined by the pixel point in the original graph (width, height).</td>
 </tr>
 <tr class="row-even"><td>fixed</td>
+<td>int</td>
 <td>0 for using relative position, 1 for using fixed pixel position. (default = 0)</td>
 </tr>
 </tbody>
@@ -447,23 +483,29 @@ fixed pixel position. (default = 0)</td>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
-<col width="90%" />
+<col width="7%" />
+<col width="83%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>patch</td>
+<td>str</td>
 <td>The path for water mark image</td>
 </tr>
 <tr class="row-odd"><td>clear_ratio</td>
-<td>How clear the water mark is</td>
+<td>float</td>
+<td>The contrast between the watermark and the background</td>
 </tr>
 <tr class="row-even"><td>position</td>
+<td>int or dict</td>
 <td>When fixed = 0, the position of QR Code has 5 choices: 1 for Upper Left, 2 for Upper Right, 3 for Center, 4 for Bottom Left, 5 for Bottom Right
 (default = 5). When fixed = 1, the position is defined by the pixel point in the original graph (width, height).</td>
 </tr>
 <tr class="row-odd"><td>fixed</td>
+<td>int</td>
 <td>0 for using relative position, 1 for using fixed pixel position. (default = 0)</td>
 </tr>
 </tbody>
@@ -474,17 +516,21 @@ fixed pixel position. (default = 0)</td>
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="24%" />
-<col width="76%" />
+<col width="20%" />
+<col width="17%" />
+<col width="63%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>num</td>
+<td>int</td>
 <td>number of slices</td>
 </tr>
 <tr class="row-odd"><td>direction</td>
+<td>int</td>
 <td>1 for slice vertical, 0 for slice horizontal</td>
 </tr>
 </tbody>
@@ -495,19 +541,48 @@ fixed pixel position. (default = 0)</td>
 <p>Field Description</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="29%" />
-<col width="71%" />
+<col width="23%" />
+<col width="20%" />
+<col width="56%" />
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
 <td><strong>Value</strong></td>
 </tr>
 <tr class="row-even"><td>postfix</td>
-<td>image postfix</td>
+<td>str</td>
+<td>Image postfix</td>
 </tr>
 </tbody>
 </table>
 </div>
+</div>
+<div class="section" id="processing-response">
+<h2>Processing Response<a class="headerlink" href="#processing-response" title="Permalink to this headline">¶</a></h2>
+<p>Previous query response a json.</p>
+<p>Field Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="20%" />
+<col width="56%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Parameter</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Value</strong></td>
+</tr>
+<tr class="row-even"><td>data</td>
+<td>dict</td>
+<td>All processed files’ name</td>
+</tr>
+<tr class="row-odd"><td>file_cnt</td>
+<td>int</td>
+<td>File count in the data field</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="downloading">
 <h2>Downloading<a class="headerlink" href="#downloading" title="Permalink to this headline">¶</a></h2>
